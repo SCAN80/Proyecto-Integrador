@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- estilos CSS -->
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
+    <link 
+    rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <script src="https://kit.fontawesome.com/b6cde832c4.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment-with-locales.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/locale/es.min.js"></script>  
+
+    <title>Proyecto con Javascript</title>
+  </head>
+  <body>
+    <section class="caja">
+      <header>
+        <div class="logo">
+          <h1 class="animate__fadeInDownBig">Proyecto Integrador</h1>
+        </div>
+      </header>
+      <nav class="menu">
+        <ul class="animate__backInLeft">
+          <li><a href="#">Inicio</a></li>
+          <li><a href="#">Calculadoras</a></li>
+          <li><a href="#">Sobre Mi</a></li>
+          <li><a href="#">Contacto</a></li>
+          <i class="fa-solid fa-bars"></i>
+          </ul>
+       </nav>
+      <main>
+        <section>
+          <article id="article1">
+            <!-- articulos insertados dinamicamente   -->
+          </article>
+          <a href="#" class="button-more">Leer Mas</a><br><br>
+          <article id="article2">
+            <!-- articulos insertados dinamicamente   -->
+          </article>
+          <a href="#" class="button-more">Leer Mas</a>
+          <article class="article">
+            <h3>Valor nutricional</h3>
+            <span id="date"class="date"></span>
+            <p>
+              Para controlar el peso, es importante comprender que cada alimento tiene una cantidad de calorías. Estas calorías son nuestro combustible para realizar todo lo que tenemos que hacer durante el día. <br>
+              Por lo tanto, es posible que no lo notes, pero si comes 3 unidades de una galleta rellena, ingieres 140 calorías. Con estas mismas 140 calorías, podrías comer una pierna de pollo asada, una opción mucho más nutritiva. Una lata de leche condensada aporta unas increíbles 1.280 calorías, lo que equivale a un día entero de comidas ligeras para quienes buscan dietas de adelgazamiento.<br>
+              La regla más importante es que la cantidad de calorías este equilibrada con la cantidad de energía consumida durante el día. Es decir, si consumes 2.500 calorías al día, pero gastas solo 1.500, esas mil kilocalorías a más se transformarán en grasa, un mecanismo natural de nuestro organismo para acumular energía, como prevención por si algún día se agota.
+            </p>
+            <a href="#" class="button-more">Leer Mas</a>
+          </article>
+          <article class="article">
+            <h3>Ingesta calorica diaria</h3>
+            <span id="date1" class="date"></span>
+            <p>
+              La ingesta calórica correcta siempre va a depender de cada persona, tal como señala la Fundación Española de Nutrición, que apunta que las necesidades nutricionales varían según la edad, el sexo y el estado de salud. <br>
+              En general, la Organización Mundial de la Salud establece un cálculo genérico: entre 1.600 y 2.000 calorías al día para las mujeres, y para los hombres entre 2.000 y 2.500.
+            </p>
+            <a href="#" class="button-more">Leer Mas</a>
+          </article>
+        </section>
+        <aside class="aside">
+          <div class="acercaDe">
+            <h4><span> Proyecto</span></h4>
+            <img src="./img/IMC.png" alt="" />
+            <p>
+              El Índice de Masa Corporal determina, a partir de la estatura y el
+              peso, cuál el peso más saludable que puede tener una persona. Este
+              índice se calcula dividiendo tu peso en kilos, entre el cuadrado
+              de tu estatura expresado en metros
+            </p>
+          </div>
+          <div class="login">
+            <h4><span>Calculadora IMC</span></h4>
+            <form id="formulario">
+              <label for="sexo">Sexo</label>
+              <input type="text" placeholder="Ingrese su Sexo (M-Mujer/H-Hombre)" id="sexo"/>
+              <label for="peso">Peso</label>
+              <input type="text" placeholder="Ingrese su Peso" id="peso" />
+              <label for="altura">Altura</label>
+              <input type="text" placeholder="Ingrese su Altura" id="altura" />
+              <button id="btncalcular"class="ov-btn-slide-close">Calcular</button>
+            </form>
+          </div>
+          <div id="caja">
+            <h4><span>Resultado</span></h4>
+            <!-- <label for="indice">IMC</label> -->
+            <p class="formato">IMC</p>
+            <p id="result" class="formato">DATOS</p>
+            <!-- <label for="indice">DESCRIPCION</label> -->
+            <p class="formato">DESCRIPCION</p>
+            <p id="mensaje" class="formato">DATOS</p>
+          </div>
+            <h4><span>Calculadora Nutricional</span></h4>
+            <label for="text">Alimento</label>
+            <input type="text" id="food" placeholder="Ingrese un alimento">
+            <button id="btn-search" class="ov-btn-slide-close">Buscar</button>
+          <div id="result_food" class="card"></div>
+          </div>
+        </aside>
+      </main>
+    </section>
+    <footer>
+    <h3 class="animate__backInRight">Grupo N° 5 - Comisión 192 / Argentina Programa &copy</h3> 
+    </footer>
+    <script src="./js/main.js"></script>
+    <script src="./script.js"></script>   
+  </body>
+</html>
