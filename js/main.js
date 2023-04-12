@@ -1,6 +1,7 @@
 let form = document.getElementById('formulario')
 let caja = document.getElementById('caja')
 let mensaje = document.getElementById('mensaje')
+let descargarBtn = document.getElementById('descargarpdf');
 form.addEventListener('click',(event)=>{
     event.preventDefault()
     let sexo = document.getElementById('sexo').value 
@@ -44,16 +45,29 @@ form.addEventListener('click',(event)=>{
         }
         result.innerHTML = indice
         mensaje.innerHTML = resultado
-
+        // Guardar resultado en variable global
+        window.indiceGlobal = indice;
+        // Guardar resultado en variable global
+        window.resultadoGlobal = resultado;
     }
 })
+
+descargarBtn.addEventListener('click', () => {
+  const doc = new jsPDF();
+  doc.setTextColor("#0000FF");
+  doc.setFontSize(30);
+  doc.setFontStyle("bold");
+  const textLines = doc.splitTextToSize('Examen de IMC:\n'+ '\n' +'Su índice de masa corporal es:\n' + window.indiceGlobal + '\n' + '\nSu evaluación es:\n '+ window.resultadoGlobal, doc.internal.pageSize.width - 20);
+  doc.text(textLines, 10, 10);
+  doc.save('resultado.pdf');
+});
 
 /* Articulos dinamicos */ 
 let post=[
     {
         title:'¿Cómo sé si soy obeso?',
         date : 'Publicado: ' + moment().date() + ' de ' + moment().format("MMMM") + ' Del año ' + moment().format("YYYY"),
-        content:'De forma sencilla, la obesidad se puede determinar calculando el               Índice de Masa Corporal – IMC. Este índice se divide en rangos de IMC, que luego indican tu grado de obesidad[1]. En 1832, Adolfhe Quételet fue el primero en aplicar las matemáticas al estudio del hombre, creando un índice que recibió su nombre y que años más tarde se conocería como Índice de Masa Corporal. Sin embargo, los estudios de Quételet fueron olvidados durante casi un siglo, y solo después de la Segunda Guerra Mundial los científicos comenzaron a estudiar la relación entre el peso corporal y otras enfermedades. En 1960, cuando en algunos países la obesidad se convirtió prácticamente en una epidemia, la fórmula de Quételet fue redescubierta y validada por científicos. A partir de entonces, el cálculo fue adoptado por la Organización Mundial de la Salud y luego se denominó IMC[2][3]. Esta fórmula es bastante simple: divide tu peso (kg) por tu estatura (m) al cuadrado (el número multiplicado por sí mismo)' 
+        content:'De forma sencilla, la obesidad se puede determinar calculando el Índice de Masa Corporal – IMC. Este índice se divide en rangos de IMC, que luego indican tu grado de obesidad[1]. En 1832, Adolfhe Quételet fue el primero en aplicar las matemáticas al estudio del hombre, creando un índice que recibió su nombre y que años más tarde se conocería como Índice de Masa Corporal. Sin embargo, los estudios de Quételet fueron olvidados durante casi un siglo, y solo después de la Segunda Guerra Mundial los científicos comenzaron a estudiar la relación entre el peso corporal y otras enfermedades. En 1960, cuando en algunos países la obesidad se convirtió prácticamente en una epidemia, la fórmula de Quételet fue redescubierta y validada por científicos. A partir de entonces, el cálculo fue adoptado por la Organización Mundial de la Salud y luego se denominó IMC[2][3]. Esta fórmula es bastante simple: divide tu peso (kg) por tu estatura (m) al cuadrado (el número multiplicado por sí mismo)' 
     },
     {
         title:'¿Causas de la obesidad?',

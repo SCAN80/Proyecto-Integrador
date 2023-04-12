@@ -10,9 +10,8 @@
     rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <script src="https://kit.fontawesome.com/b6cde832c4.js" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment-with-locales.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/locale/es.min.js"></script>  
-
-    <title>Proyecto con Javascript</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js"></script> 
+  <title>Proyecto con Javascript</title>
   </head>
   <body>
     <section class="caja">
@@ -74,23 +73,24 @@
           <div class="login">
             <h4><span>Calculadora IMC</span></h4>
             <form id="formulario">
-              <label for="sexo">Sexo</label>
-              <input type="text" placeholder="Ingrese su Sexo (M-Mujer/H-Hombre)" id="sexo"/>
-              <label for="peso">Peso</label>
-              <input type="text" placeholder="Ingrese su Peso" id="peso" />
-              <label for="altura">Altura</label>
-              <input type="text" placeholder="Ingrese su Altura" id="altura" />
+              <label for="sexo" class="label">Sexo</label>
+              <input type="text" placeholder="Ingrese su sexo (M-Mujer/H-Hombre)" id="sexo"/>
+              <label for="peso"class="label">Peso</label>
+              <input type="text" placeholder="Ingrese su peso en kg." id="peso" />
+              <label for="altura"class="label">Altura</label>
+              <input type="text" placeholder="Ingrese su altura en metros (ej: 1.80)" id="altura" />
               <button id="btncalcular"class="ov-btn-slide-close">Calcular</button>
             </form>
           </div>
           <div id="caja">
-            <h4><span>Resultado</span></h4>
+            <h4><span>Resultado IMC</span></h4>
             <!-- <label for="indice">IMC</label> -->
-            <p class="formato">IMC</p>
-            <p id="result" class="formato">DATOS</p>
+            <p class="formato">IMC:</p>
+            <p id="result" class="formato">RESULTADO</p>
             <!-- <label for="indice">DESCRIPCION</label> -->
-            <p class="formato">DESCRIPCION</p>
-            <p id="mensaje" class="formato">DATOS</p>
+            <p class="formato">EVALUACIÓN CLÍNICA:</p>
+            <p id="mensaje" class="formato">RESULTADO</p>
+            <button id="descargarpdf"class="ov-btn-slide-close">Descargar PDF</button>
           </div>
             <h4><span>Calculadora Nutricional</span></h4>
             <label for="text">Alimento</label>
@@ -102,7 +102,7 @@
       </main>
     </section>
     <footer>
-    <h3 class="animate__backInRight">Grupo N° 5 - Comisión 192 / Argentina Programa &copy</h3> 
+    <h3 class="animate__backInRight">Grupo N° 5 - Comision 192 / Argentina Programa &copy</h3> 
     </footer>
     <script src="./js/main.js"></script>
     <script src="./script.js"></script>   
