@@ -28,6 +28,7 @@ form.addEventListener('click',(event)=>{
                 }  
                 break
             case "H":
+                
                 if (indice < 21){
                     resultado = "Peso inferior al normal.";
                 }else 
@@ -43,8 +44,14 @@ form.addEventListener('click',(event)=>{
             default:
                 resultado = "No se ha podido calcular. No ha indicado h (hombre) o m (mujer).";
         }
-        result.innerHTML = indice
-        mensaje.innerHTML = resultado
+        //result.innerHTML = indice
+        //mensaje.innerHTML = resultado
+        caja.innerHTML = `
+                            <h3>Resultado IMC</h3>
+                            <strong>IMC: ${indice}</strong><br>
+                            <strong>Evaluación Clinica: ${resultado}</strong>
+                         `
+        
         // Guardar resultado en variable global
         window.indiceGlobal = indice;
         // Guardar resultado en variable global
@@ -67,12 +74,12 @@ let post=[
     {
         title:'¿Cómo sé si soy obeso?',
         date : 'Publicado: ' + moment().date() + ' de ' + moment().format("MMMM") + ' Del año ' + moment().format("YYYY"),
-        content:'De forma sencilla, la obesidad se puede determinar calculando el Índice de Masa Corporal – IMC. Este índice se divide en rangos de IMC, que luego indican tu grado de obesidad[1]. En 1832, Adolfhe Quételet fue el primero en aplicar las matemáticas al estudio del hombre, creando un índice que recibió su nombre y que años más tarde se conocería como Índice de Masa Corporal. Sin embargo, los estudios de Quételet fueron olvidados durante casi un siglo, y solo después de la Segunda Guerra Mundial los científicos comenzaron a estudiar la relación entre el peso corporal y otras enfermedades. En 1960, cuando en algunos países la obesidad se convirtió prácticamente en una epidemia, la fórmula de Quételet fue redescubierta y validada por científicos. A partir de entonces, el cálculo fue adoptado por la Organización Mundial de la Salud y luego se denominó IMC[2][3]. Esta fórmula es bastante simple: divide tu peso (kg) por tu estatura (m) al cuadrado (el número multiplicado por sí mismo)' 
+        content:'De forma sencilla, la obesidad se puede determinar calculando el Índice de Masa Corporal – IMC. Este índice se divide en rangos de IMC, que luego indican tu grado de obesidad[1]. En 1832, Adolfhe Quételet fue el primero en aplicar las matemáticas al estudio del hombre, creando un índice que recibió su nombre y que años más tarde se conocería como Índice de Masa Corporal.' 
     },
     {
         title:'¿Causas de la obesidad?',
         date: 'Publicado: ' + moment().date() + ' de ' + moment().format("MMMM") + ' Del año ' + moment().format("YYYY"),
-        content:'Si hay algo en lo que todas las fuentes de información están de común acuerdo es que la obesidad tiene un motivo: el comer en exceso. Entonces dirás, “¡pero como poco, no sé por qué engordo tanto!”.[1] Bueno, vayamos por partes. La comida es algo que no se mide simplemente por el peso, el tamaño o el sabor. Para controlar el peso, es importante comprender que cada alimento tiene una cantidad de calorías. Estas calorías son nuestro combustible para realizar todo lo que tenemos que hacer durante el día. Por lo tanto, es posible que no lo notes, pero si comes 3 unidades de una galleta rellena, ingieres 140 calorías. Con estas mismas 140 calorías, podrías comer una pierna de pollo asada, una opción mucho más nutritiva. Una lata de leche condensada aporta unas increíbles 1.280 calorías, lo que equivale a un día entero de comidas ligeras para quienes buscan dietas de adelgazamiento.'
+        content:'Si hay algo en lo que todas las fuentes de información están de común acuerdo es que la obesidad tiene un motivo: el comer en exceso. Entonces dirás, “¡pero como poco, no sé por qué engordo tanto!”.[1] Bueno, vayamos por partes. La comida es algo que no se mide simplemente por el peso, el tamaño o el sabor. Para controlar el peso, es importante comprender que cada alimento tiene una cantidad de calorías. '
     }
 ]
  //let article1 = document.getElementsByClassName('article1')

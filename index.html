@@ -61,7 +61,7 @@
         </section>
         <aside class="aside">
           <div class="acercaDe">
-            <h4><span> Proyecto</span></h4>
+            <h4><span> Tabla de Valores</span></h4>
             <img src="./img/IMC.png" alt="" />
             <p>
               El Índice de Masa Corporal determina, a partir de la estatura y el
@@ -73,25 +73,30 @@
           <div class="login">
             <h4><span>Calculadora IMC</span></h4>
             <form id="formulario">
-              <label for="sexo" class="label">Sexo</label>
-              <input type="text" placeholder="Ingrese su sexo (M-Mujer/H-Hombre)" id="sexo"/>
-              <label for="peso"class="label">Peso</label>
-              <input type="text" placeholder="Ingrese su peso en kg." id="peso" />
-              <label for="altura"class="label">Altura</label>
-              <input type="text" placeholder="Ingrese su altura en metros (ej: 1.80)" id="altura" />
+              <label for="sexo" class="label">Sexo
+                <input type="text" placeholder="Ingrese su sexo (M-Mujer/H-Hombre)" id="sexo"/>
+              </label>
+              <label for="peso"class="label">Peso
+                <input type="number" placeholder="Ingrese su peso en kg." id="peso" />
+              </label>
+              <label for="altura"class="label">Altura
+                 <input type="number" placeholder="Ingrese su altura en metros (ej: 1.80)" id="altura" />
+              </label>
               <button id="btncalcular"class="ov-btn-slide-close">Calcular</button>
             </form>
           </div>
-          <div id="caja">
-            <h4><span>Resultado IMC</span></h4>
-            <!-- <label for="indice">IMC</label> -->
+          <!-- agregando modificacion -->
+          <div id="caja" >
+            <!-- <h4><span>Resultado IMC</span></h4>
             <p class="formato">IMC:</p>
             <p id="result" class="formato">RESULTADO</p>
-            <!-- <label for="indice">DESCRIPCION</label> -->
             <p class="formato">EVALUACIÓN CLÍNICA:</p>
-            <p id="mensaje" class="formato">RESULTADO</p>
-            <button id="descargarpdf"class="ov-btn-slide-close">Descargar PDF</button>
+            <p id="mensaje" class="formato">RESULTADO</p> -->
+
+            
           </div>
+          <button id="descargarpdf"class="ov-btn-slide-close">Descargar PDF</button>
+            <!-- fin  modificacion -->
             <h4><span>Calculadora Nutricional</span></h4>
             <label for="text">Alimento</label>
             <input type="text" id="food" placeholder="Ingrese un alimento">

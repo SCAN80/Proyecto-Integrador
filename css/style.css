@@ -8,7 +8,7 @@
     font-size: 62.5%;
 } */
 body{
-    background: url(../img/hojas.jpg);
+    background: url(../img/cielo.jpg);
     /*esta propiedad hace que siempre se muestre el fondo
     y no se acabe la imagen*/
     background-attachment: fixed;
@@ -86,7 +86,7 @@ main{
 }
 
 section{
-    width: 70%;    
+    width: 60%;    
     font-family: 'Courier New', Courier, monospace;
 }
 .article h3 {
@@ -131,14 +131,14 @@ section{
 .aside{
     margin-left: 10px;
     font-family: 'Courier New', Courier, monospace;
-    width: 30%;
+    width: 40%;
     /* border: 1px solid; */
 }
 .aside h4{
     margin-top: 40px;
     margin-bottom: 20px;
     text-align: center;
-    line-height: 20px;
+    line-height: 10px;
     color:#333;
     background: url(../img/lines.png) repeat-x;
 }
@@ -161,7 +161,7 @@ label{
 }
 #sexo{
     margin-left: 2px;
-    padding: 5px;
+    padding: 7px;
     border-radius: 2px;
     border:2px solid #0c6ecf;
     width: 100%;
@@ -170,7 +170,7 @@ label{
 }
 #peso{
     margin-left: 2px;
-    padding: 5px;
+    padding: 7px;
     border-radius: 2px;
     border:2px solid #0c6ecf;
     width: 100%;
@@ -179,12 +179,22 @@ label{
 }
 #altura{
     margin-left: 2px;
+    padding: 7px;
+    border-radius: 2px;
+    border:2px solid #0c6ecf;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+#caja{
+    margin-left: 2px;
     padding: 5px;
     border-radius: 2px;
     border:2px solid #0c6ecf;
     width: 100%;
     margin-bottom: 10px;
     margin-top: 5px;
+    text-align: center;
 }
 form input[type="submit"]{
     background: #ccc;
@@ -200,7 +210,7 @@ form input[type="submit"]{
     font-size: 15px;
     color: #1A2980; /* color de fuente */
     border: 2px solid #0c6ecf; /* tamaño y color de borde */
-    padding: 5px 20px;
+    padding: 3px 20px;
     border-radius: 5px; /* redondear bordes */
     position: relative;
     z-index: 1;
